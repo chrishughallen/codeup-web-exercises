@@ -3,6 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Subscribe</title>
+    <style>
+        body{
+            width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        legend{
+            text-align: center;
+            color: #0C4767;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -10,12 +23,16 @@
 
     <fieldset>
 
-        <legend><label for="email">Subscribe To Emails </label></legend>
+        <legend><h1>Subscribe to emails</h1></legend>
+
+        <label for="email"></label>
 
         <input type="email" name="email" id="email" placeholder="email address" autofocus>
 
+
         <label for="subscribe"></label>
         <input type="checkbox" checked value="subscribe" id="subscribe" name="subscribe">
+        <br>
         <button>subscribe</button>
 
     </fieldset>
