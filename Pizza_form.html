@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Time</title>
+</head>
+<body>
+
+<h1>Welcome to Pizza Time</h1>
+<form action="https://hookb.in/vX8DWagL" method="POST">
+
+
+    <fieldset>
+        <legend>Who is the order for?</legend>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+    </fieldset>
+
+    <fieldset>
+        <legend>Choose a size!</legend>
+        <label>
+            <label for="small"><input name="size" type="radio" id="small" value="small">Small</label>
+            <br>
+            <label for="medium"><input name="size" type="radio" id="medium" value="medium">Medium</label>
+            <br>
+            <label for="large"><input name="size" type="radio" id="large" value="large">Large</label>
+            </label>      
+    </fieldset>
+
+
+
+    <fieldset>
+        <legend>Choose your toppings!</legend>
+            <label>
+            <input name="toppings" type="checkbox" id="pepperoni" value="pepperoni">Pepperoni
+            </label>
+
+            <br>
+
+            <label>
+            <input  name="toppings" type="checkbox" id="cheese" value="cheese">Cheese
+            </label>
+
+            <br>
+
+            <label>
+            <input  name="toppings" type="checkbox" id="tomato" value="tomato">Tomato
+            </label>
+
+            <br>
+
+            <label>
+            <input  name="toppings" type="checkbox" id="mushroom" value="mushroom">Mushroom
+            </label>
+
+            <br>
+        
+            <label>
+            <input  name="toppings" type="checkbox" id="olives" value="olive">Olive
+            </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Choose a location</legend>
+        <label for="location">
+        <select name="location" id="location">
+            <option value="north">North</option>
+            <option value="south">South</option>
+        </select>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Sign in to save your order</legend>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+    </fieldset>
+
+    <input type="hidden" name="ordered_by" value="name">
+
+    <br>
+
+<button>Submit Order</button>
+
+
+</form>
+
+</body>
+</html>
