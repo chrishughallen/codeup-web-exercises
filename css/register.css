@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url('../img/register.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: sans-serif;
+}
+
+body{
+    width:500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1{
+    color: #0C4767;
+    font-family: permanent marker, sans-serif;
+}
+
+button{
+    margin-top: 10px;
+    font-size: 3em;
+    font-family: permanent marker, sans-serif;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+button:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+fieldset{
+    background-color: white;
+    opacity: .85;
+    margin-top: 5%;
+}
+
