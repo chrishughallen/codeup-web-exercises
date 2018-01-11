@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza Time</title>
+    <link rel="stylesheet" href="css/pizza.css">
 </head>
 <body>
 
-<h1>Welcome to Pizza Time</h1>
+
 <form action="https://hookb.in/vX8DWagL" method="POST">
 
 
     <fieldset>
-        <legend>Who is the order for?</legend>
+        <h1>Who is the order for?</h1>
         <label for="name">Name</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" autofocus>
     </fieldset>
 
     <fieldset>
-        <legend>Choose a size!</legend>
+        <h1>Choose a size!</h1>
         <label>
             <label for="small"><input name="size" type="radio" id="small" value="small">Small</label>
             <br>
@@ -30,7 +31,7 @@
 
 
     <fieldset>
-        <legend>Choose your toppings!</legend>
+       <h1>Choose your toppings!</h1>
             <label>
             <input name="toppings" type="checkbox" id="pepperoni" value="pepperoni">Pepperoni
             </label>
@@ -61,7 +62,7 @@
     </fieldset>
 
     <fieldset>
-        <legend>Choose a location</legend>
+        <h1>Choose a location!</h1>
         <label for="location">
         <select name="location" id="location">
             <option value="north">North</option>
@@ -71,20 +72,20 @@
     </fieldset>
 
     <fieldset>
-        <legend>Sign in to save your order</legend>
+        <h1>Sign in to save your order!</h1>
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-        <br>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
+        <label for="email"></label>
+        <input type="email" name="email" id="email" placeholder="email">
+        <label for="password"></label>
+        <input type="password" name="password" id="password" placeholder="password">
+
     </fieldset>
 
     <input type="hidden" name="ordered_by" value="name">
 
-    <br>
+    <button>Submit Order</button>
 
-<button>Submit Order</button>
+
 
 
 </form>

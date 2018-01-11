@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body{
+    background-image: url('../img/pizza.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: sans-serif;
+
+}
+
+fieldset{
+    background-color: white;
+    opacity:.85;
+    margin-top: 2%;
+}
+
+h1{
+    font-family: permanent marker, sans-serif;
+    color: red;
+}
+
+button{
+    font-size: 2em;
+    font-family: permanent marker, sans-serif;
+    background-color: red;
+    color: white;
+}
+
+button:hover{
+    color: red;
+    background-color: white;
+
+}
+
