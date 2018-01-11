@@ -32,10 +32,13 @@ fieldset{
     margin-top: 25%;
     background-color: black;
     border: none;
+    opacity: .88;
     border-radius:10%
+
 }
 
 button:hover{
     color: white;
+    text-decoration: underline;
 }
 

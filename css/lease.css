@@ -1,0 +1,42 @@
+body{
+    width: 1000px;
+    margin: 0 auto;
+    background-image: url('../img/realestate.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+
+}
+
+button{
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+header h1{
+    text-align: center;
+    font-size: 4em;
+}
+h1{
+    text-align: left;
+    color: #0C4767;
+    text-decoration: underline;
+}
+
+header{
+    text-decoration: underline;
+    color: #0C4767;
+
+}
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+
+fieldset{
+    background-color: white;
+    opacity: .9;
+}

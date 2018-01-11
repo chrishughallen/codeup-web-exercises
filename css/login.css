@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url('../img/login.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: sans-serif;
+}
+
+h1{
+    color: #0C4767;
+    text-align: center;
+    font-family: permanent marker, sans-serif;
+}
+
+.login{
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 80%;
+    background-color: navy;
+    opacity:.9;
+    padding: 10px;
+    border-radius:10%;
+}
+
+input{
+    opacity: .8;
+    border: none;
+    border-radius:10%
+
+}
+
+.stay{
+    font-size: 1.5em;
+    color: white;
+}
+
+input{
+    height: 30px;
+    width: auto;
+}
+
+button{
+    font-size: 3em;
+    border: none;
+    background-color: transparent;
+    font-family: permanent marker, sans-serif;
+    color: red;
+}
+
+button:hover{
+
+    color: white;
+}

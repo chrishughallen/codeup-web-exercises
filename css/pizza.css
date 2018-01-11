@@ -7,11 +7,11 @@ body{
     background-repeat: no-repeat;
     background-size:cover;
     width: 500px;
-    margin: 0 auto;
     text-align: center;
     font-family: sans-serif;
 
 }
+
 
 fieldset{
     background-color: white;
@@ -22,18 +22,22 @@ fieldset{
 h1{
     font-family: permanent marker, sans-serif;
     color: red;
+    text-decoration: underline;
 }
 
 button{
+    margin-top: 2%;
     font-size: 2em;
     font-family: permanent marker, sans-serif;
-    background-color: red;
-    color: white;
+    background-color: transparent;
+    color: red;
+    border: none;
 }
 
 button:hover{
-    color: red;
-    background-color: white;
+    color: blue;
+
+
 
 }
 

@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
 body{
-    background-color: salmon;
-    width: 1000px;
+    background-color: black;
+    width: 700px;
     margin: 0 auto;
     background-image: url('../img/dogbg.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size:cover;
     background-attachment: fixed;
     text-align: center;
     font-family: sans-serif;
@@ -18,13 +19,21 @@ img{
 }
 
 fieldset{
-    background-color: grey;
-    opacity: .8;
+    background-color: white;
+    opacity: .75;
     margin: 10px;
 }
 
 button{
-    font-size: 1.5em;
+    font-size: 2em;
+    font-family: permanent marker, sans-serif;
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+button:hover{
+    color: blue;
 }
 
 h1{
