@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body{
+    background-color: teal;
+    width: 1000px;
+    margin: 0 auto;
+    background-image: url('../img/dogbg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+img{
+    width: 70px;
+}
+
+fieldset{
+    background-color: grey;
+    opacity: .8;
+    margin: 10px;
+}
+
+button{
+    font-size: 1.5em;
+}
+
+h1{
+    font-family: permanent marker, sans-serif;
+    font-size: 4em;
+    color: white;
+}
