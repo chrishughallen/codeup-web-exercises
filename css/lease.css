@@ -1,10 +1,11 @@
 body{
-    width: 1000px;
+    width: 1125px;
     margin: 0 auto;
     background-image: url('../img/realestate.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:cover;
+    font-family: sans-serif;
 
 }
 
@@ -16,6 +17,11 @@ button{
 header h1{
     text-align: center;
     font-size: 4em;
+    background-color: lightgrey;
+    opacity: .9;
+    font-style:italic;
+
+
 }
 h1{
     text-align: left;
@@ -37,6 +43,24 @@ input {
 }
 
 fieldset{
-    background-color: white;
+    background-color: lightgrey;
     opacity: .9;
+    margin-top: .5%;
+}
+
+button{
+    background-color: transparent;
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    margin-right: 25%;
+}
+
+button:hover{
+    color: lime;
+}
+
+.clear:hover{
+    color: red;
 }

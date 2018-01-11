@@ -29,7 +29,7 @@ button{
 }
 
 fieldset{
-    margin-top: 25%;
+    margin-top: 15%;
     background-color: black;
     border: none;
     opacity: .88;
@@ -37,8 +37,12 @@ fieldset{
 
 }
 
+textarea{
+    font-size:.5em;
+    font-family: permanent marker, sans-serif;
+}
+
 button:hover{
     color: white;
-    text-decoration: underline;
 }
 
