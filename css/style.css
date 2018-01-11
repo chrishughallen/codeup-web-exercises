@@ -1,8 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Khand|Russo+One');
+
+
+
+body{
+    color: #C9D5B5;
+    background-image: url('../img/veridian.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: optima,calibri,sans-serif;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2em;
+    background-color: black;
+
+}
+
 img{
-    width: 500px;
+    width: 300px;
 }
 
 .fancy-header {
-    color: blue; /* single line comment */
+    color: #E3DBDB;
     text-decoration: underline;
+    font-style: oblique;
+    font-size: 2.2em;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+h1,h2{
+    font-style: oblique;
+}
+
+main{
+    background-color: black;
+    opacity: .85;
+    padding-bottom: 5%;
+    padding-top: 2%;
+    border: 3px solid #C9D5B5;
+}
+
+
+
+li{
+    list-style-position: inside;
+}
+
+table{
+    width: 700px;
+    margin: 0 auto;
+}
+
+header p{
+    text-align: center;
+    color: hotpink;
+    text-decoration: underline;
+}
+
+
+th,td,tr{
+    border: 1px solid #C9D5B5;
+    font-size: 1.25em;
+    padding: 2px;
+}
+
+header,h2{
+    text-decoration: underline;
+    font-family: khand,sans-serif;
+}
+
+button{
+    margin-top: 10%;
+    font-size: 1em;
+    background-color: turquoise;
+    border: none;
+    border-radius:10%;
+}
+
+button:hover{
+    background-color: hotpink;
+    color: white;
+}
+
+.product{
+    width: 500px;
+}
+
+.product h2{
+    font-size: 3em;
+}
+
+a:link{
+    color: deeppink;
+
+}
+
+a:hover{
+    color: lime;
+}
+
+a:active{
+    color: yellow;
+}
+
+a:visited{
+    color: blue;
+}
+
+ul{
+    list-style:square;
+}
+
+
+a:visited{
+    color: yellow;
+}
+
+a:hover{
+    color: #0F0;
 }
