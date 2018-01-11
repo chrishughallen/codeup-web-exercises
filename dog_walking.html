@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Walk My Dog, dog.</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <style>
+        h1,h2{
+            text-align: center;
+            color: white;
+            font-family: indie flower, sans-serif;
+        }
+
+
+        
+        legend{
+            text-align: center;
+        }
+
+        body{
+            background-image: url('img/dogbg.png');
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+
+        }
+
+        button:hover{
+            background-color: green;
+        }
+
+        img{
+            width: 80px;
+            height: 60px;
+        }
+
+        fieldset{
+            background-color: orangered;
+            margin-bottom: 10%;
+            border-radius:10%;
+        }
+
+        button{
+            font-size: 20px;
+            margin-bottom: 20%;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+<h1>Yo dog, we'll walk your dog!</h1>
+
+<form action="https://hookb.in/K2JD5AJJ" method="POST">
+
+<fieldset>
+   <h2>Pick up time and length of walk!</h2>
+
+    <label for="time">
+        <select name="time" id="time" required>
+            <option value="12PM">12:00 PM</option>
+            <option value="1PM">1:00 PM</option>
+            <option value="2PM">2:00 PM</option>
+            <option value="3PM">3:00 PM</option>
+            <option value="4PM">4:00 PM</option>
+            <option value="5PM">5:00 PM</option>
+            <option value="6PM">6:00 PM</option>
+            <option value="7PM">7:00 PM</option>
+            <option value="8PM">8:00 PM</option>
+
+        </select>
+    </label>
+
+    <label for="length">Length Of Walk
+        <input type="number" name="length" id="length" placeholder="hrs or mins." required>
+    </label>
+
+
+</fieldset>
+
+    <fieldset>
+<h2>Enter your dog's approximate weight.</h2>
+
+        <label for="weight">
+            <input type="number" name="weight" id="weight" placeholder="lbs." required>
+        </label>
+
+    </fieldset>
+
+    <fieldset>
+    <h2>What is your dog's name?</h2>
+
+        <label for="dog_name">
+            <input type="text" name="dog_name" id="dog_name" required>
+        </label>
+
+    </fieldset>
+
+    <fieldset>
+            <h2>Contact information.</h2>
+
+        <label for="client_name">Name
+            <input type="text" name="client_name" id="client_name" placeholder="your name" required>
+        </label>
+
+        <label for="phone">Phone Number
+            <input type="number" name="phone" id="phone" placeholder="xxx-xxx-xxxx" required>
+        </label>
+
+        <label for="email">Email Address
+            <input type="email" name="email" id="email" placeholder="your email">
+        </label>
+
+
+    </fieldset>
+
+    <fieldset>
+       <h2>Payment information</h2>
+
+        <h3>Select your type of card</h3>
+
+        <label><img src="img/visa.png" alt="visa">
+            <input type="radio" name="card" value="visa">
+        </label>
+
+        <label><img src="img/mc.png" alt="mastercard">
+            <input type="radio" name="card" value="MC">
+        </label>
+
+        <label><img src="img/amex.png" alt="amex">
+            <input type="radio" name="card" value="amex">
+        </label>
+
+        <label><img src="img/discover.png" alt="discover">
+            <input type="radio" name="card" value="discover">
+        </label>
+
+        <br>
+        <label for="card_number">CC Number</label>
+        <input type="text" name="card_number" id="card_number" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="16" required>
+
+        <label for="expiration">Expiration date</label>
+        <input type="text" id="expiration" name="expiration" placeholder="mmyy" maxlength="4" required>
+        <label for="cvc">CVC</label>
+        <input type="text" id="cvc" name="cvc" maxlength="3" required>
+
+    </fieldset>
+
+
+    <button>Schedule and Pay!</button>
+
+
+</form>
+
+</div>
+
+</body>
+</html>
