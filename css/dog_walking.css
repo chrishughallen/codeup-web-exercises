@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
 body{
-    background-color: teal;
+    background-color: salmon;
     width: 1000px;
     margin: 0 auto;
     background-image: url('../img/dogbg.png');
@@ -10,6 +10,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     text-align: center;
+    font-family: sans-serif;
 }
 
 img{
@@ -28,6 +29,6 @@ button{
 
 h1{
     font-family: permanent marker, sans-serif;
-    font-size: 4em;
+    font-size: 3em;
     color: white;
 }
