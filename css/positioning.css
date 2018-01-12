@@ -4,10 +4,6 @@ h1{
     margin-bottom: 50px;
 }
 
-main{
-    margin: 0;
-    padding: 0;
-}
 
 .box{
     width: 50px;
@@ -20,10 +16,10 @@ main{
     font-weight: bold;
     float: left;
     font-size: 15px;
-
+    text-shadow: 2px 2px #000;
 }
 
-img{
+.arrow{
     position: relative;
     top: -80px;
     left: 40px;
@@ -35,45 +31,31 @@ img{
 
 .orange{
     background-color:orange;
-
-    
 }
 
 .yellow{
     background-color:yellow;
-    /*clear: both;*/
-
-
 }
 
 .green{
     background-color:green;
-
 }
 
 .blue{
     background-color:blue;
-    /*clear: both;*/
-
 }
 
 .purple{
     background-color:#ee78F6;
-
 }
 
-.box:nth-child(4){
+div:nth-child(odd){
     clear: both;
 }
 
-.ribbon{
-    position: absolute;
-    right:46px;
-}
-
-.ribbon img{
-    position: relative;
-    right: 0px;
-    top: -10;
+#ribbon{
+    position: fixed;
+    right: 0;
+    top: 0;
 }
 
