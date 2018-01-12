@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 
+*{
+    box-sizing:border-box;
+}
+
+
 body{
+    width: 50%;
+    margin: 0 auto;
     background-image: url('../img/pizza.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
-    width: 500px;
     text-align: center;
     font-family: sans-serif;
 

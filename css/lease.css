@@ -1,5 +1,9 @@
+*{
+    box-sizing:border-box;
+}
+
 body{
-    width: 1125px;
+    width: 80%;
     margin: 0 auto;
     background-image: url('../img/realestate.png');
     background-repeat: no-repeat;
@@ -17,7 +21,7 @@ button{
 header h1{
     text-align: center;
     font-size: 4em;
-    background-color: lightgrey;
+    background-color: white;
     opacity: .9;
     font-style:italic;
 
@@ -54,13 +58,18 @@ button{
     font-weight: bold;
     color: white;
     border: none;
-    margin-right: 25%;
+
 }
 
 button:hover{
     color: lime;
 }
 
-.clear:hover{
-    color: red;
+.buttons{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 1%;
+    background-color: darkgreen;
+    opacity: .85;
+    text-align: center;
 }

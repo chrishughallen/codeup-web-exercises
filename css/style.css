@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Khand|Russo+One');
+@import url('https://fonts.googleapis.com/css?family=Khand|Russo+One|Permanent+Marker');
 
 
+*{
+    box-sizing:border-box;
+
+}
 
 body{
+    width: 50%;
+    margin: 0 auto;
     color: #C9D5B5;
     background-image: url('../img/veridian.png');
     background-repeat: no-repeat;
@@ -10,8 +16,7 @@ body{
     background-size:cover;
     background-attachment: fixed;
     font-family: optima,calibri,sans-serif;
-    width: 800px;
-    margin: 0 auto;
+
     text-align: center;
     font-size: 2em;
     background-color: black;
@@ -44,10 +49,12 @@ main{
     border: 3px solid #C9D5B5;
 }
 
-
-
 li{
     list-style-position: inside;
+}
+
+ol{
+    list-style-type: upper-roman;
 }
 
 table{
@@ -76,14 +83,16 @@ header,h2{
 button{
     margin-top: 10%;
     font-size: 1em;
-    background-color: turquoise;
+    background-color: transparent;
     border: none;
-    border-radius:10%;
+    font-family: permanent marker, sans-serif;
+    color: white
+;
 }
 
 button:hover{
-    background-color: hotpink;
-    color: white;
+    color: hotpink
+;
 }
 
 .product{
