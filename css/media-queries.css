@@ -79,13 +79,14 @@
         float: right;
     }
     
-    #main{
+    section{
         float: left;
+    }
+    #main{
         width: 50%;
     }
 
     .sub-section{
-        float: left;
         width: 33.333%;
         margin-left: 15%;
     }
