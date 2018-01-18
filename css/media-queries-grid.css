@@ -83,7 +83,6 @@
         float: left;
     }
     #main{
-        width: 50%;
     }
 
     img{
@@ -91,7 +90,6 @@
     }
 
     .sub-section{
-        width: 33.333%;
         margin-left: 15%;
     }
     
