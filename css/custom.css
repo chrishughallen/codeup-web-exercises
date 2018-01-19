@@ -1,0 +1,31 @@
+
+@media screen and (min-width:600px) {
+
+    .jumbotron {
+        background-image: url('../img/pizzabg.png');
+    }
+
+    h1 {
+        background-color: white;
+        opacity: .8;
+        text-align: center;
+        width: 100%;
+
+    }
+
+
+
+    .panel-heading{
+        font-weight: bold;
+    }
+    
+
+    
+
+}
+
+
+
+
+
+
