@@ -13,7 +13,9 @@
 
     }
 
-
+    .container>h1{
+        width: 100%;
+    }
 
     .panel-heading{
         font-weight: bold;

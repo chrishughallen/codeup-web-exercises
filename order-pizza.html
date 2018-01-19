@@ -12,7 +12,7 @@
 
 
 
-<!--<div class="container">-->
+<div class="container-fluid">
 
 <!--BOOTSTRAP DEFAULT NAVBAR-->
 <nav class="navbar navbar-default">
@@ -47,6 +47,8 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+</div>
+
 
 <!--jumbotron-->
     <div class="jumbotron hidden-xs">
@@ -54,21 +56,21 @@
     </div>
 
 
-
+<div class="container">
 <h2>Build your own pizza!</h2>
 
 
 
 <!--panel selector buttons-->
 <ul class="nav nav-tabs">
-    <li role="presentation" class="active"><a href="#"><span class="badge">1</span> Size and Crust</a></li>
-    <li role="presentation"><a href="#"><span class="badge">2</span> Cheese and Sauce</a></li>
-    <li role="presentation"><a href="#"><span class="badge">3</span> Toppings</a></li>
+    <li role="presentation" class="active"><a href="#crust"><span class="badge">1</span> Size and Crust</a></li>
+    <li role="presentation"><a href="#cheese"><span class="badge">2</span> Cheese and Sauce</a></li>
+    <li role="presentation"><a href="#toppings"><span class="badge">3</span> Toppings</a></li>
 </ul>
 
 
 <!--Choose your crust panel-->
-<div class="panel panel-info">
+<div id="crust" class="panel panel-info">
     <div class="panel-heading">Choose your Crust</div>
     <div class="panel-body">
         <div class="panel panel-default">
@@ -108,7 +110,7 @@
 
 
 <!--Cheese and Sauce panel-->
-    <div class="panel panel-info">
+    <div id="cheese" class="panel panel-info">
         <div class="panel-heading">Choose your cheese and sauce</div>
         <div class="panel-body">
 
@@ -126,6 +128,9 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="panel panel-default">
                 <div class="panel-heading">Sauce?</div>
                 <div class="panel-info">
@@ -138,6 +143,8 @@
                             <option>Alfredo Sauce</option>
                         </select>
                     </div>
+
+
                         <div class="panel-heading panel-info"><b>How Much?</b>
 
                             <select class="form-control">
@@ -145,6 +152,7 @@
                                 <option>Normal</option>
                                 <option>Extra</option>
                             </select>
+
                         </div>
                     </div>
                 </div>
@@ -160,7 +168,7 @@
 
 <!--Toppings Panel-->
 
-<div class="panel panel-info">
+<div id="toppings" class="panel panel-info">
     <div class="panel-heading">Choose toppings</div>
     <div class="panel-body">
         <div class="panel panel-default">
