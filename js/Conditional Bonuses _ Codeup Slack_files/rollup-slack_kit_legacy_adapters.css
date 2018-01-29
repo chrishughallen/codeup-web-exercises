@@ -1,0 +1,31 @@
+[lang] body{font-family:NotoSansJP,Slack-Lato,appleLogo,sans-serif}
+.p-alert_banner{font-size:15px;line-height:1.46666667;font-weight:initial}
+.p-alert_banner__text{vertical-align:middle}
+.p-app_management_modal,.p-app_management_modal li{font-size:15px;line-height:1.46666667;font-weight:initial}
+.p-app_management_modal h2{font-size:22px;line-height:1.36363636;font-weight:900}
+.p-app_management_modal h3{font-size:18px;line-height:1.33333333;font-weight:900;margin-bottom:0}
+.p-coachmark{font-size:15px;line-height:1.46666667;font-weight:initial}
+.p-coachmark__title{font-size:22px;line-height:1.36363636;font-weight:900}
+button,input,select,textarea{font-family:inherit}
+[lang] .c-message__body{line-height:1.4}
+[lang=ja-JP] .c-message__body{line-height:1.5}
+[lang] .c-search_message__body{line-height:1.4}
+[lang=ja-JP] .c-search_message__body{line-height:1.5}
+@media screen and (max-width:990px){#client-ui.flex_pane_showing:not(.details_showing) .c-notification_bar .c-notification_bar__formatting{display:none}
+}
+@media screen and (max-width:920px){#client-ui.flex_pane_showing.details_showing .c-notification_bar .c-notification_bar__formatting{display:none}
+}
+@media screen and (max-width:545px){#client-ui .c-notification_bar .c-notification_bar__formatting{display:none}
+}
+@media screen and (max-width:837px){#client-ui:not(.flex_pane_showing) .c-notification_bar__section--left:not(:empty)+.c-notification_bar__section--right{display:none}
+}
+@media screen and (max-width:1137px){#client-ui.details_showing .c-notification_bar__section--left:not(:empty)+.c-notification_bar__section--right{display:none}
+}
+@media screen and (max-width:1204px){#client-ui.flex_pane_showing:not(.details_showing) .c-notification_bar__section--left:not(:empty)+.c-notification_bar__section--right{display:none}
+}
+@keyframes border_focus_animation{0%{box-shadow:0 0 4px .3px #2f9fe0,0 0 0 .5px #0576b9}
+100%{box-shadow:0 0 4px 0 #2f9fe0,0 0 0 0 #0576b9}
+}
+.c-sidebar_menu li{margin-bottom:4px}
+.c-sidebar_menu__header{margin-bottom:0}
+.c-sidebar_menu__divider{border:none;border-top:1px solid #e8e8e8;margin-bottom:16px}
