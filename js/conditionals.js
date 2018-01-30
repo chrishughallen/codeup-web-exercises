@@ -304,24 +304,97 @@ function dayOfTheWeekStartsWithT(input) {
 // 5) EXTRA BONUS: is not the same forwards and backwards
 
 
+function isValidPassword (password) {
+
+    var has6characters = isSixCharacters(password);
+
+    var containsOneLetter = containsLetter(password);
+
+    var containsOneNumber = containsNumber(password);
+
+    var containsUppercase = containsUpper(password);
+
+    var containsLowercase = containsLower(password);
+
+    var lettersAndNumbersOnly = onlyLettersAndNumbers(password);
+
+    var isNotPalindrome = notPalindrome(password);
+
+    if (has6characters == false){
+        return 'Password must be 6 characters'
+    }
+    else if (containsOneLetter == false){
+        return 'Password must contain a letter'
+    }
+    else if (containsOneNumber == false){
+        return 'Password must contain a number'
+    }
+    else if (containsUppercase == false){
+        return 'Password must contain one uppercase letter'
+    }
+    else if (containsLowercase == false){
+        return 'Password must contain one lowercase letter'
+    }
+    else if (lettersAndNumbersOnly == true){
+        return 'Password must contain letters and numbers only'
+    }
+    else if (isNotPalindrome == false){
+        return 'Password cannot be a palindrome'
+    }
+
+    else {
+        return "Password is valid"
+    }
 
 
-function isValidPassword (password){
-    if (password.length<6){
-        return ('Password must be 6 characters');
-    }
-    else if (password === password.toLowerCase()){
-        return('Password must contain an uppercase letter')
-    }
-    else if (password === password.toUpperCase()){
-        return ('Password must contain a lowercase letter')
-    }
-    else if (password.includes (!0) || password.includes (!1) || password.includes (!2) || password.includes (!3) || password.includes (!4) || password.includes (!5) || password.includes (!6) || password.includes (!7) || password.includes (!8) || password.includes (!9) || password.includes (!0)){
-        return ('Password must contain a number')
-    }
-
-    else return('Password is valid')
 }
+
+
+    function isSixCharacters (password) {
+        return password.length === 6;
+    }
+
+    function containsUpper (password) {
+    return password !== password.toLowerCase()
+    }
+
+    function containsLower(password) {
+    return password !== password.toUpperCase()
+    }
+
+    function containsNumber(password) {
+    return password.includes(0) || password.includes(1) || password.includes(2) ||
+            password.includes(3) || password.includes(4) || password.includes(5) ||
+            password.includes(6) || password.includes(7) || password.includes(8) ||
+            password.includes(9) || password.includes(0);
+
+    }
+
+    function containsLetter(password) {
+    password = password.toLowerCase(password);
+    return password.includes('a') || password.includes('b') || password.includes('c') ||
+        password.includes('d') || password.includes('e') || password.includes('f') ||
+        password.includes('g') || password.includes('h') || password.includes('i') ||
+        password.includes('j') || password.includes('k') || password.includes('l') ||
+        password.includes('m') || password.includes('n') || password.includes('o') ||
+        password.includes('p') || password.includes('q') || password.includes('r') ||
+        password.includes('s') || password.includes('t') || password.includes('u') ||
+        password.includes('v') || password.includes('w') || password.includes('x') ||
+        password.includes('y') || password.includes('z')
+    }
+
+        function notPalindrome(password){
+        return password !== password.split('').reverse().join('')
+    }
+
+    function onlyLettersAndNumbers(password){
+    return password.includes('!') || password.includes('@') || password.includes('#') || password.includes('$') ||
+        password.includes('%') || password.includes('^') || password.includes('&') || password.includes('*') ||
+        password.includes('(') || password.includes(')') || password.includes('-') || password.includes('_') ||
+        password.includes('+') || password.includes('=');
+}
+
+
 
 
 
