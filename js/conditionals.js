@@ -397,8 +397,12 @@ function isValidPassword (password) {
 
 
 
+var input = prompt('Please enter a password');
 
-
+while (isValidPassword(input) === false){
+    input = prompt('Please enter a valid password');
+}
+alert ('Your password is valid')
 
 
 
