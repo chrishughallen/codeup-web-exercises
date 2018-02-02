@@ -14,9 +14,9 @@
 
     var person = {
 
-        firstName:'Chris',
-        lastName:'Allen'
-    }
+        firstName: 'Chris',
+        lastName: 'Allen'
+    };
 
     console.log(person.firstName);
     console.log(person.lastName);
@@ -31,9 +31,9 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = function() {
+    person.sayHello = function () {
         return 'Hello ' + person.firstName + ' ' + person.lastName
-    }
+    };
 
     console.log(person.sayHello());
 
@@ -57,20 +57,14 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(function(discount){
-        if (discount.amount>200){
-            console.log(discount.name + ' spent $' + discount.amount + '. ' + discount.name + ' gets a 12% discount which is $' + (discount.amount*.12).toFixed(2) + '. Making the total ' + (discount.amount - (discount.amount*.12)).toFixed(2) + '.')
+    shoppers.forEach(function (discount) {
+        if (discount.amount > 200) {
+            console.log(discount.name + ' spent $' + discount.amount + '. ' + discount.name + ' gets a 12% discount which is $' + (discount.amount * .12).toFixed(2) + '. Making the total ' + (discount.amount - (discount.amount * .12)).toFixed(2) + '.')
         }
         else {
             console.log(discount.name + ' spent ' + discount.amount + '. That doesn\'t qualify for the discount.')
         }
     });
-
-
-
-
-
-
 
 
     /** TODO:
@@ -89,40 +83,42 @@
     var books = [
 
 
-
         {
-        title: 'Fear and Loathing in Las Vegas',
-        author: {
-            firstName: 'Hunter',
-            lastName: 'Thompson'
+            title: 'Fear and Loathing in Las Vegas',
+            author: {
+                firstName: 'Hunter',
+                lastName: 'Thompson'
             }
         },
-        {title:'The Four Agreements',
-        author:{
-            firstName:'Don Miguel',
-            lastName:'Ruiz'
-        }
+        {
+            title: 'The Four Agreements',
+            author: {
+                firstName: 'Don Miguel',
+                lastName: 'Ruiz'
+            }
         },
-        {title:'The Subtle art of not giving a f**k',
-        author:{
-            firstName:'Marc',
-            lastName:'Maron'
-        }
+        {
+            title: 'The Subtle art of not giving a f**k',
+            author: {
+                firstName: 'Marc',
+                lastName: 'Maron'
+            }
         },
-        {title:'1984',
-        author:{
-            firstName:'George',
-            lastName:'Orwell'
-        }
+        {
+            title: '1984',
+            author: {
+                firstName: 'George',
+                lastName: 'Orwell'
+            }
         },
-        {title:'Brave New World',
-        author:{
-            firstName:'Aldous',
-            lastName:'Huxley'
-        }
+        {
+            title: 'Brave New World',
+            author: {
+                firstName: 'Aldous',
+                lastName: 'Huxley'
+            }
         }
     ];
-    console.log(books[2].title);
 
     /**
      * TODO:
@@ -149,47 +145,86 @@
      *      ...
      */
 
-    books.forEach(function(info,index){
+    books.forEach(function (info, index) {
 
-        console.log('Book # ' + (index) + '\n' + 'Title: '+ info.title + '\n' + 'Author: ' + info.author.firstName + ' ' + info.author.lastName  )
-    });
-
-    /**
-     * Bonus:
-     * - Create a function named `createBook` that accepts a title and author
-     *   name and returns a book object with the properties described
-     *   previously. Refactor your code that creates the books array to instead
-     *   use your function.
-     * - Create a function named `showBookInfo` that accepts a book object and
-     *   outputs the information described above. Refactor your loop to use your
-     *   `showBookInfo` function.
-     */
+        console.log('Book # ' + (index + 1) + '\n' + 'Title: ' + info.title + '\n' + 'Author: ' + info.author.firstName + ' ' + info.author.lastName);
 
 
+        /**
+         * Bonus:
+         * - Create a function named `createBook` that accepts a title and author
+         *   name and returns a book object with the properties described
+         *   previously. Refactor your code that creates the books array to instead
+         *   use your function.
+         * - Create a function named `showBookInfo` that accepts a book object and
+         *   outputs the information described above. Refactor your loop to use your
+         *   `showBookInfo` function.
+         */
 
 
 
+        var books = [];
 
-})();
+        function createBook() {
+
+            var title = prompt('What is the name of the book?');
+            var author = prompt('Who wrote it?');
+            var authorName = (author.split(' '));
+
+            var book = {
+                title: title,
+                author: {
+                    firstName: authorName[0],
+                    lastName: authorName[1]
+                }
+
+            };
 
 
-var books = [];
-function createBook(){
-
-    var title = prompt('What is the name of the book?');
-    var author = prompt('Who wrote it?');
+            books.push(book);
 
 
-    var authorName = (author.split(' '));
-    var book = {
-        title:title,
-        author: {
-            firstName:authorName[0],
-            lastName:authorName[1]
         }
-    };
+    })
 
-    books.push(book)
-}
+    })()
 
-createBook();
+
+    var books = [];
+
+    function createBook() {
+
+        var title = prompt('What is the name of the book?');
+        var author = prompt('Who wrote it?');
+        var authorName = (author.split(' '));
+
+        var book = {
+            title: title,
+            author: {
+                firstName: authorName[0],
+                lastName: authorName[1]
+            }
+
+        };
+
+
+        books.push(book);
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

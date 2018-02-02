@@ -158,3 +158,45 @@ function phoneNumberParser(input){
 console.log(phoneNumberParser(1234567));
 console.log(phoneNumberParser(1234567890));
 console.log(phoneNumberParser(18005555555));
+
+
+
+
+
+var dog = {
+    breed:'Lab',
+    weight:80,
+    age:2,
+    color:'Yellow',
+    sterilized:false,
+    shotRecords:[
+        {
+            date:'',
+            typeOfShot:''
+        }
+    ],
+    bark:function() {
+    console.log('Woof');
+    },
+    getOlder:function(){
+        this.age += 1
+    },
+    fix:function(){
+        if (this.sterilized === false){
+            this.sterilized = true
+        }
+    },
+    vaccinate:function(shot){
+        this.shotRecords.typeOfShot.push(shot.typeOfShot);
+        this.shotRecords.date.push(new Date());
+    }
+
+    };
+
+
+
+
+
+
+
+
