@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Defuse the BOM</title>
+</head>
+<body>
+
+<h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
+<button id="defuser">Defuse the BOM</button>
+
+<script>
+(function() {
+    "use strict";
+
+    var detonationTimer = 5;
+
+    function updateTimer() {
+        if (detonationTimer === 0) {
+            alert('EXTERMINATE!');
+            document.body.innerHTML = '';
+        } else if (detonationTimer > 0) {
+            document.getElementById('timer').innerHTML = detonationTimer;
+        }
+
+        detonationTimer--;
+    }
+    var stopTime = (setInterval(updateTimer,1000));
+
+    function defuseTheBOM() {
+        clearInterval(stopTime);
+    }
+
+    var defuser = document.getElementById('defuser');
+    defuser.addEventListener('click', defuseTheBOM);
+})();
+</script>
+</body>
+</html>
