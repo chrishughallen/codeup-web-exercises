@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Bonus</title>
+</head>
+<body>
+
+<button onclick="listMaker()">Add an Item to the List</button>
+
+<script>
+
+    function listMaker() {
+        document.body.innerHTML += ('<ul>')
+
+                var item = prompt('What would you like to add?');
+                document.body.innerHTML += ('<li class="list_item">' + (item) + '</li>');
+
+        var list = document.querySelectorAll('.list_item');
+        for (var i = 0; i<list.length;i++){
+            list[i].style.color = ('blue');
+            list[i].style['fontSize'] = ('25px');
+            list[i].style['font-family'] = ('sans-serif');
+            console.log(list)
+        }
+        document.body.innerHTML += ('</ul>')
+    };
+
+
+</script>
+</body>
+</html>

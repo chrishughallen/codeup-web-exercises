@@ -155,11 +155,6 @@ function phoneNumberParser(input){
 }
 
 
-console.log(phoneNumberParser(1234567));
-console.log(phoneNumberParser(1234567890));
-console.log(phoneNumberParser(18005555555));
-
-
 
 
 
@@ -192,6 +187,10 @@ var dog = {
     }
 
     };
+
+
+
+//*************DOM BONUSES************************
 
 
 
