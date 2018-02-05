@@ -6,9 +6,13 @@
 
     <style>
         #map{
-            width: 75%;
+            width: 500px;
             height:500px;
             margin: 0 auto;
+        }
+        #searchForm{
+            font-size: 25px;
+            text-align: center;
         }
     </style>
 </head>
@@ -16,14 +20,27 @@
 
 <div id="map"></div>
 
+<div id="searchForm">
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvGGiduHFnlohRyTubz_RvwUi46t0XOJU">
+<form name="search" action="post">
+    <input type="text" id="address" name="address">
+</form>
 
-</script>
+<button id="searchAddress">Submit</button>
+
+</div>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvGGiduHFnlohRyTubz_RvwUi46t0XOJU"></script>
 
 <script>
 
-    (function() {
+    var searchAddress = document.getElementById('searchAddress');
+
+    searchAddress.addEventListener('click', geoCodeIt);
+
+    (function geoCodeIt() {
         "use strict";
 
         var mapOptions = {
@@ -36,6 +53,32 @@
 
         var map = new google.maps.Map(document.getElementById('map'), mapOptions);
     })();
+
+
+    function geoCodeIt() {
+        "use strict";
+
+        var mapOptions = {
+            zoom: 15
+        };
+
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        var address = document.forms.search.address.value;
+        console.log(address)
+
+        var geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({'address': address}, function(results,status){
+            if (status === google.maps.GeocoderStatus.OK){
+                map.setCenter(results[0].geometry.location);
+            } else{
+                alert('Geocoding was not successful - STATUS: ' + status);
+            }
+        });
+    }
+
+
 </script>
 
 </body>
