@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>google_maps_api_exercise</title>
+    <style>
+        #map{
+            width: 100%;
+            height: 700px;
+
+        }
+
+        body{
+            background-color:lightseagreen;
+        }
+
+        
+        h1{
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Google Map</h1>
+
+
+<button data-zoom=5 class="zoom">Zoom X 5</button>
+<button data-zoom=10 class="zoom">Zoom X 10</button>
+<button data-zoom=15 class="zoom">Zoom X 15</button>
+<button data-zoom=20 class="zoom">Zoom X 20</button>
+
+
+<div id="map"></div>
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvGGiduHFnlohRyTubz_RvwUi46t0XOJU">
+</script>
+
+<script>
+
+    "use strict"
+
+
+function initMap() {
+
+
+    //Create a blank map on the page with zoom property - center it based on geocoder response
+    var map = new google.maps.Map(document.getElementById('map'),
+        {
+        zoom: 10,
+        // center: {lat:48.867538, lng:2.332635}
+        });
+
+
+    //Geocode 'Paris France' and set the map to center on default
+
+    //Assign address variable to where you want the geocoder to search
+    var address = 'Paris'
+
+    //initiate a new geocoder
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({"address": address}, function (results,status){
+
+        //if address variable is located with geocoder - center the map on that location
+        if (status === google.maps.GeocoderStatus.OK){
+            map.setCenter(results[0].geometry.location);
+        }
+        //if address variable is not found - send an error alert
+        else{
+            alert('Geocoding was not successful!')
+        }
+    });
+
+
+        //Function to create a marker and info window for an object in the markers arary
+        function addMarker(props) {
+
+            var marker = new google.maps.Marker({
+                animation: google.maps.Animation.DROP,
+                position:props.coords,
+                map:map
+
+            });
+
+            var info = new google.maps.InfoWindow({
+                content:props.info
+            });
+
+
+            marker.addListener('click', function(){
+                    info.open(map,marker)
+            });
+
+        }
+
+        //array of locations to add markers and info windows to.
+        var markers = [
+
+            {
+                coords: {
+                    lat: 48.867538, lng: 2.332635
+                },
+                info: '<h3>Big Fernand Burgers - Paris, FR</h3>' +
+                '<li>Best burger I\'ve ever eaten</li>' +
+                '<li>Paprika seasoned fries</li>' +
+                '<li>Lemonade made in store</li>'
+
+            },
+
+            {
+                coords: {
+                    lat: 47.045456, lng: -122.899021
+                },
+                info: '<h3>Old School Pizza - Olympia, WA</h3>' +
+                '<li>Best pizza in my hometown</li>' +
+                '<li>Full of vintage posters and videogames</li>',
+            },
+
+            {
+                coords: {
+                    lat: 30.266832, lng: -97.745027
+                },
+                info: '<h3>Trulucks - Austin, TX</h3>' +
+                '<li>Fresh seafood</li>' +
+                '<li>Great wine selection</li>'
+
+            }
+        ];
+
+        //forEach loop to run the addMarker function on each item in the markers array
+        markers.forEach(function(marker){
+            addMarker(marker)
+        })
+
+    }
+
+    initMap()
+
+    var zoomButtons = document.getElementsByClassName('zoom');
+    zoomButtons = Array.from(zoomButtons);
+    zoomButtons.forEach(function(element){
+        element.addEventListener('click', function(event){
+            var zoomLevel = event.target.getAttribute('data-zoom');
+            zoomLevel = parseInt(zoomLevel);
+            map.setZoom(zoomLevel);
+        });
+    });
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
