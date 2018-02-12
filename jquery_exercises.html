@@ -8,9 +8,8 @@
 
 <h1 id="header">Austin, TX</h1>
 
-<p id="about">The city known for live music, tacos,
-    and being taken over by hipsters.</p>
-
+<p id="about">The city of live music, tacos,
+    and hipsters.</p>
 
 <h1 id="codeup">Things to do</h1>
 
@@ -21,7 +20,7 @@
 </ul>
 
 <div id="theDiv">
-   <p>The rest is up to you!</p>
+   <p>-Willie Nelson lives there too!</p>
 </div>
 
 
@@ -32,12 +31,18 @@
 <script>
     'use strict';
 
-    $('li').css('font-size','20px');
+    $('li').css({
+        fontSize:'20px'
+    });
 
 
-    $('p,h1,li');
+    $('p,h1,li').css({
+        backgroundColor:'lime',
+        fontFamily:'sans-serif'
+    });
 
     alert($('h1').text());
+
 </script>
 
 
