@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+<main>
+<h1>Konami Code</h1>
+
+</main>
+
+<script src="js/jQuery-2.2.4.js"></script>
+
+
+<script>
+    "use strict";
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+
+
+    var keys = [38,38,40,40,37,39,37,39,66,65,13];
+    var nextKey = 0;
+
+    function livesAdded(){
+        var maxKeyIndex = keys.length;
+        if(nextKey>=maxKeyIndex) {
+            codeEntered();
+            nextKey = 0;
+        }
+    }
+
+    $(document).keydown(function(e){
+        var key = e.which;
+        if(key === keys[nextKey]){
+            nextKey++
+        }
+        else {
+            nextKey = 0;
+        }
+
+        livesAdded();
+    });
+
+    function codeEntered(){
+
+    alert('30 LIVES ADDED!');
+        $('body').css({
+            backgroundColor:'black',
+            backgroundImage:'url(\'https://media2.giphy.com/media/XreQmk7ETCak0/giphy.gif\')',
+            backgroundSize:'cover',
+            backgroundRepeat:'no-repeat'
+        });
+        $('h1').remove();
+    }
+
+    $('h1').animate({borderColor:'red'});
+
+
+</script>
+</body>
+</html>
