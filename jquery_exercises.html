@@ -31,17 +31,31 @@
 <script>
     'use strict';
 
-    $('li').css({
-        fontSize:'20px'
+    $('h1').click(function(){
+        $(this).css({
+            backgroundColor:'purple'
+        });
     });
 
 
-    $('p,h1,li').css({
-        backgroundColor:'lime',
-        fontFamily:'sans-serif'
+    $('p').dblclick(function(){
+        $(this).css({
+            fontSize:'18px'
+        });
     });
 
-    alert($('h1').text());
+
+  $('li').hover(function(){
+      $(this).css({
+          color:'red'
+      })
+  },
+  function(){
+      $(this).css({
+          color:'black'
+      });
+  });
+
 
 </script>
 
