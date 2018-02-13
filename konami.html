@@ -10,7 +10,7 @@
 <body>
 <main>
 <h1>Konami Code</h1>
-
+    <audio src=""></audio>
 </main>
 
 <script src="js/jQuery-2.2.4.js"></script>
@@ -28,8 +28,8 @@
     var nextKey = 0;
 
     function livesAdded(){
-        var maxKeyIndex = keys.length;
-        if(nextKey>=maxKeyIndex) {
+
+        if(nextKey>=keys.length) {
             codeEntered();
             nextKey = 0;
         }
@@ -52,14 +52,15 @@
     alert('30 LIVES ADDED!');
         $('body').css({
             backgroundColor:'black',
-            backgroundImage:'url(\'https://media2.giphy.com/media/XreQmk7ETCak0/giphy.gif\')',
+            backgroundImage:'url(\'https://media3.giphy.com/media/LcfBYS8BKhCvK/giphy.gif\')',
             backgroundSize:'cover',
             backgroundRepeat:'no-repeat'
         });
         $('h1').remove();
+
+        $('audio').attr('src', 'audio/8bit.wav');
     }
 
-    $('h1').animate({borderColor:'red'});
 
 
 </script>

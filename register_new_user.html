@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register New user</title>
+</head>
+<body>
+
+
+
+<h1>New User</h1>
+<div></div>
+<form action="" method="POST">
+
+    <label for="username">Username:</label>
+    <br>
+    <input type="text" id="username">
+    <br>
+
+    <label for="email">Email:</label>
+    <br>
+    <input type="email" id="email" required>
+    <br>
+
+    <label for="password">Password:</label>
+    <br>
+    <input type="password" id="password">
+    <br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <br>
+    <input type="password" id="confirmPassword">
+    <br>
+
+    <button id="login">Submit</button>
+
+    <h5></h5>
+
+</form>
+
+
+<script src="js/jQuery-2.2.4.js"></script>
+
+<script>
+
+    var username = $('#username');
+    var email = $('#email');
+    var password = $('#password');
+    var confirmPassword = $('#confirmPassword');
+    var loginBtn = $('button');
+
+
+    //FUNCTION TO MAKE SURE FORM IS COMPLETE AND PASSWORDS MATCH
+    function validateForm(){
+        event.preventDefault();
+        if(username.val() === ""
+            || email.val() === ""
+            || password.val() === ""
+            || confirmPassword.val() === "")
+        {
+            alert('Please fill out the entire form before submitting')
+        }
+
+        if(password.val() !== confirmPassword.val()){
+            alert('Please verify your passwords match');
+        }
+
+        if(username.val() !== ''
+            && email.val()!==''
+            && password.val() !== ''
+            && confirmPassword.val()!== ''
+            && password.val() === confirmPassword.val())
+            {
+            alert('Thanks for registering!');
+            $("form").submit();
+        }
+    }
+    //CHECK PASSWORDS MATCH AS THEY'RE TYPED IN
+    confirmPassword.on('keyup',function(){
+        if(password.val() === confirmPassword.val()){
+            $('h5').text('Passwords Match!').css({
+                color:'green'
+            });
+        }
+
+        else{
+            $('h5').text('Passwords do not match!').css({
+                color:'red'
+            })
+        }
+    });
+
+
+
+
+    //FUN VALIDATION FORM ON BUTTON CLICK
+    loginBtn.on('click', validateForm);
+
+</script>
+
+</body>
+</html>
