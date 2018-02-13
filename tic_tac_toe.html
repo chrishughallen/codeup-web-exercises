@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic_Tac_Toe</title>
+    <style>
+
+        .board{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+            margin: 2px;
+        }
+        .float{
+            float: left;
+        }
+        
+        .rowclear{
+            clear: left;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="board">
+    <h1>Tic Tac Toe!</h1>
+    <button id="reset">Restart</button>
+    <h2>Go player: <span>1</span></h2>
+    <div id="sq1" class="box float"></div>
+    <div id="sq2" class="box float"></div>
+    <div id="sq3" class="box float "></div>
+    <div id="sq4" class="box float rowclear "></div>
+    <div id="sq5" class="box float"></div>
+    <div id="sq6" class="box float"></div>
+    <div id="sq7" class="box float rowclear"></div>
+    <div id="sq8" class="box float"></div>
+    <div id="sq9" class="box float "></div>
+</div>
+
+<script src="js/jQuery-2.2.4.js"></script>
+<script src="js/tic_tac_toe.js"></script>
+</body>
+</html>

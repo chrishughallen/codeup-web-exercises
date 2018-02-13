@@ -4,7 +4,9 @@
     <title>Konami Code</title>
     <style>
 
-
+h1{
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -19,21 +21,8 @@
 <script>
     "use strict";
 
-    $(document).keyup(function(event){
-        console.log(event.keyCode);
-    });
-
-
     var keys = [38,38,40,40,37,39,37,39,66,65,13];
     var nextKey = 0;
-
-    function livesAdded(){
-
-        if(nextKey>=keys.length) {
-            codeEntered();
-            nextKey = 0;
-        }
-    }
 
     $(document).keydown(function(e){
         var key = e.which;
@@ -43,24 +32,24 @@
         else {
             nextKey = 0;
         }
-
-        livesAdded();
+        codeEntered();
     });
+    
+    
 
     function codeEntered(){
-
-    alert('30 LIVES ADDED!');
-        $('body').css({
-            backgroundColor:'black',
-            backgroundImage:'url(\'https://media3.giphy.com/media/LcfBYS8BKhCvK/giphy.gif\')',
-            backgroundSize:'cover',
-            backgroundRepeat:'no-repeat'
-        });
-        $('h1').remove();
-
-        $('audio').attr('src', 'audio/8bit.wav');
+        if(nextKey>=keys.length) {
+            $('body').css({
+                backgroundColor:'black',
+                backgroundImage:'url(\'https://media3.giphy.com/media/LcfBYS8BKhCvK/giphy.gif\')',
+                backgroundSize:'cover',
+                backgroundRepeat:'no-repeat'
+            });
+            $('h1').remove();
+            nextKey = 0;
+            alert('30 LIVES ADDED!');
+        }
     }
-
 
 
 </script>
