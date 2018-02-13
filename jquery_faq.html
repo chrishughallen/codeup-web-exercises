@@ -14,8 +14,33 @@
         }
 
         .highlight{
-            background-color: lime;
+            background-color: yellow;
         }
+
+        .frame{
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            float: left;
+            margin: 5px;
+
+        }
+
+        .left {
+            background-image: url('https://images.unsplash.com/photo-1511971523672-53e6411f62b9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5fdeb99cd07e09362ad0e54a27ba595&auto=format&fit=crop&w=1050&q=80');
+            background-size: cover;
+        }
+
+        .middle{
+            background-image: url('https://images.unsplash.com/photo-1438026889123-5b38e75fbdae?ixlib=rb-0.3.5&s=17258f49671360b800f974f24989e40a&auto=format&fit=crop&w=967&q=80');
+            background-size:cover;
+        }
+
+        .right{
+            background-image: url('https://images.unsplash.com/photo-1493102407231-c2ac9af3f4fd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cad4c0407d68e6bc87d9fa59f57ae02e&auto=format&fit=crop&w=1049&q=80');
+            background-size:cover;
+        }
+
 
     </style>
 </head>
@@ -57,10 +82,51 @@
 </dl>
 
 
+<h3 id="national-parks-heading">Carlsbad Caverns National Park</h3>
+<ul id="national-parks">
+    <li>The land that forms Carlsbad Caverns was once part of an ancient underwater reef called Capitan Reef. Marine fossils have been found in the rock.
+    </li>
+    <li>The caverns were forged by sulfuric acid – not water erosion, as is the case with most limestone caves.</li>
+    <li>There are no flowing rivers or streams inside the caves.</li>
+    <li>We know, from pictographs in the area, that Native Americans lived on this land starting from 12-14,000 years ago. It is believed that they used the caves near the surface long before they were “discovered.”</li>
+</ul>
+
+<h3>Big Bend National Park</h3>
+<ul id="state-parks-texas">
+    <li>Big bend is the only state park to have an entire mountain range within its borders.</li>
+    <li> Big bend is larger than the state of Rhode Island. </li>
+    <li>The park is named after the "big bend" in
+        the Rio Grande in west Texas.</li>
+    <li> The treaty of Guadalupe Hidalgo was signed and claimed the Rio Grande as the official border of Texas and mexico.</li>
+</ul>
+
+<h3>Yosemite National Park</h3>
+<ul id="state-parks-california">
+    <li>Male deer (bucks) in Yosemite Park shed their antlers every fall after mating season. They grow them back in the spring.</li>
+    <li>Giant Sequoias which grow in Yosemite National Park are the biggest living things on the planet. However, the seed for the Giant Sequoia is only the size of a piece of oatmeal. Grizzly Giant is the name of the oldest Sequoia in Yosemite Park.</li>
+    <li>The American Indians who live in Yosemite are called the Ahwahneechee Indians. Their traditional homes look like teepees, but are actually made of incense-cedar bark.</li>
+    <li>Yosemite National Park is visited by over 3.5 million people every year. Summer is by far the busiest season at Yosemite.</li>
+</ul>
+<button id="lastHighlight">Click</button>
+
+<br>
+
+<div class="frame left"><button id="frame1">Swap</button></div>
+
+<div class="frame middle"><button id="frame2">Swap</button></div>
+<div class="frame right"><button id="frame3">Swap</button></div>
+
 
 <script src="js/jQuery-2.2.4.js"></script>
 
 <script>
+
+    $('#lastHighlight').on('click', function(){
+        $('ul').each(function(index,element){
+            $(element).children().last().toggleClass('highlight');
+        })
+
+    });
 
     $('dd').addClass('invisible');
 
@@ -70,8 +136,37 @@
 
     $('dt').click(function(){
         $(this).toggleClass('highlight');
+    });
+
+    $('h3').click(function(){
+        $(this).next().children().css({
+            fontWeight:'bold'
+        })
+    });
+
+    $('li').click(function(){
+        $(this).parent().children().first().css({
+            color:'blue'
+        })
     })
-    
+
+
+
+
+//
+// $('#frame1').click(function(){
+//     $('.left').toggleClass('middle');
+//     $('.middle').toggleClass('left')
+//
+// });
+
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
