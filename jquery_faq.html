@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <style>
         .invisible{
             display:none;
@@ -17,36 +18,66 @@
             background-color: yellow;
         }
 
-        .frame{
-            width: 200px;
-            height: 200px;
-            border: 3px solid black;
-            float: left;
-            margin: 5px;
-
+        span{
+            text-align: right;
+            display: block;
+        }
+        
+        h1{
+            text-align: center;
         }
 
-        .left {
-            background-image: url('https://images.unsplash.com/photo-1511971523672-53e6411f62b9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5fdeb99cd07e09362ad0e54a27ba595&auto=format&fit=crop&w=1050&q=80');
-            background-size: cover;
+        #register{
+            background-color:pink;
+            text-align: center;
+        }
+        
+        button{
+            display: inline;
         }
 
-        .middle{
-            background-image: url('https://images.unsplash.com/photo-1438026889123-5b38e75fbdae?ixlib=rb-0.3.5&s=17258f49671360b800f974f24989e40a&auto=format&fit=crop&w=967&q=80');
-            background-size:cover;
-        }
+        /*.frame{*/
+            /*width: 200px;*/
+            /*height: 200px;*/
+            /*border: 3px solid black;*/
+            /*float: left;*/
+            /*margin: 5px;*/
 
-        .right{
-            background-image: url('https://images.unsplash.com/photo-1493102407231-c2ac9af3f4fd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cad4c0407d68e6bc87d9fa59f57ae02e&auto=format&fit=crop&w=1049&q=80');
-            background-size:cover;
-        }
+        /*}*/
+
+        /*.left {*/
+            /*background-image: url('https://images.unsplash.com/photo-1511971523672-53e6411f62b9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5fdeb99cd07e09362ad0e54a27ba595&auto=format&fit=crop&w=1050&q=80');*/
+            /*background-size: cover;*/
+        /*}*/
+
+        /*.middle{*/
+            /*background-image: url('https://images.unsplash.com/photo-1438026889123-5b38e75fbdae?ixlib=rb-0.3.5&s=17258f49671360b800f974f24989e40a&auto=format&fit=crop&w=967&q=80');*/
+            /*background-size:cover;*/
+        /*}*/
+
+        /*.right{*/
+            /*background-image: url('https://images.unsplash.com/photo-1493102407231-c2ac9af3f4fd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cad4c0407d68e6bc87d9fa59f57ae02e&auto=format&fit=crop&w=1049&q=80');*/
+            /*background-size:cover;*/
+        /*}*/
 
 
     </style>
 </head>
 <body>
 
-<button>Hide/Show answers</button>
+
+<div id='signUp' class="alert alert-success" role="alert">
+    <span>X</span>
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <button class="btn btn-success center-block">Sign Up!</button>
+</div>
+
+<div id="register">
+<h2>Please register for a better experience</h2>
+<button class="btn btn-default center-block">Click to Register</button>
+</div>
+
+<button id="hideShow">Hide/Show answers</button>
 <dl>
     <dt>How Did Yellowstone get it's name?</dt>
     <dd>Yellowstone National Park is named after the Yellowstone River, the major river running through the park. </dd>
@@ -109,12 +140,11 @@
 </ul>
 
 
-<br>
+<!--<br>-->
 
-<div class="frame left"><button id="frame1">Swap</button></div>
-
-<div class="frame middle"><button id="frame2">Swap</button></div>
-<div class="frame right"><button id="frame3">Swap</button></div>
+<!--<div class="frame left"><button id="frame1">Swap</button></div>-->
+<!--<div class="frame middle"><button id="frame2">Swap</button></div>-->
+<!--<div class="frame right"><button id="frame3">Swap</button></div>-->
 
 
 <script src="js/jQuery-2.2.4.js"></script>
@@ -130,7 +160,7 @@
 
     $('dd').addClass('invisible');
 
-    $('button').click(function(){
+    $('#hideShow').click(function(){
         $('dd').toggleClass('invisible');
     });
 
@@ -148,17 +178,25 @@
         $(this).parent().children().first().css({
             color:'blue'
         })
-    })
+    });
+
+    $('span').click(function(){
+        $('#signUp').hide();
+    });
+
+    $('ul').hide();
+
+    $('h3').on('click', function(){
+        $(this).next().slideToggle();
+    });
+
+    $('#register').hide();
+
+    setTimeout(function(){
+        $('#register').fadeIn(400); }, 8000);
 
 
 
-
-//
-// $('#frame1').click(function(){
-//     $('.left').toggleClass('middle');
-//     $('.middle').toggleClass('left')
-//
-// });
 
 
 
