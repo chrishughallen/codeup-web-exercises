@@ -1,0 +1,8 @@
+{
+  "user": {
+    "firstName": "Chris",
+    "lastName": "Allen",
+    "age": 28,
+    "alive": true
+  }
+}

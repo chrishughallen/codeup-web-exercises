@@ -141,9 +141,9 @@
 
     // Highlight the entire ordered list when a list item is clicked
 
-    $('ol').on('click', function(){
-        $(this).addClass('highlight');
-    })
+    // $('ol').on('click', function(){
+    //     $(this).addClass('highlight');
+    // })
 
 
 
@@ -151,11 +151,24 @@
 
     // Highlight the first nested element inside all article elements
 
+    // $('article').each(function(index,element){
+    //     $(this).children().first().addClass('highlight');
+    // })
+
 
     // Highlight the second list item of all ordered lists
+    //
+    // $('ol').each(function(index,element){
+    //     $(this).children().eq(1).addClass('highlight')
+    // })
+
 
 
     // Highlight the third list item of all ordered lists
+    // $('ol').each(function(index,element){
+    //     $(this).children().eq(2).addClass('highlight')
+    // })
+
 
 
 
@@ -164,11 +177,27 @@
 
     // Highlight the first li of the second ordered list
 
+    // $('ol').eq(1).children().first().addClass('highlight');
+
+
 
     // alert each of the top five items when double clicking on the header for a section
 
+    var lis = $('ol').children();
+
+    $('h3').dblclick(function(){
+        alert($(this).eq(2).html())
+    })
 
     // Give a azure background color to every other list item (first item should be azure)
+
+    $('li').each(function(index,element){
+        if(index%2===0){
+            $(this).css({
+                backgroundColor:'azure'
+            })
+        }
+    })
 
 
 

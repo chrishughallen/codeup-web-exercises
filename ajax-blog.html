@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        body{
+            background-color: white;
+            background-image: url('https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=395debe4f66b27cd8fb346d73cffb70c&auto=format&fit=crop&w=966&q=80');
+            /*background-repeat: no-repeat;*/
+            background-size:cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .jumbotron{
+            width: 60%;
+            padding: 15px;
+            background-color:azure;
+            margin: 0 auto;
+            margin-bottom:10px;
+            opacity: .8;
+        }
+
+        .reader{
+            color: red;
+        }
+
+        .jumbotron p{
+            font-size: 20px;
+            font-family: Nanum Pen Script;
+        }
+        
+        h2{
+            text-decoration: underline;
+            font-family: Nanum Pen Script;
+        }
+
+        header{
+            background-color: maroon;
+            color: white;
+            opacity: .9;
+            padding: 2px;
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom:10px;
+            font-size: 4em;
+            border-radius:5%;
+            font-family: Nanum Pen Script;
+        }
+
+        header>h1{
+            font-size: 1.5em;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+</head>
+<body>
+<header>
+<h1 class="text-center">The Blog...</h1>
+</header>
+<div id="posts"></div>
+</body>
+
+<script src="js/jQuery-2.2.4.js"></script>
+
+<script>
+
+
+    var ajaxRequest = $.ajax('./data/blog.json');
+
+    ajaxRequest.done(function(data){
+        data.forEach(function(element,index){
+
+                $('#posts').append('<div class="jumbotron"><h5>' + element.date + '</h5>'
+                    + '<h2 class="text-left">' + element.title
+                    + '</h2>' + '<p class="reader">Read</p>' + '<p>'
+                    + element.content + '</p>' +
+                    '<p class="text-muted">Categories: ' + element.categories + '</p>' +'</div>');
+
+            });
+        $('.reader').next().hide();
+
+        $('.reader').click(function() {
+            $(this).next().fadeToggle(300);
+                });
+
+        });
+
+
+
+
+
+
+</script>
+</html>

@@ -28,8 +28,9 @@
         }
 
         #register{
-            background-color:pink;
+            background-color:azure;
             text-align: center;
+            padding:25px;
         }
         
         button{
@@ -66,18 +67,24 @@
 <body>
 
 
-<div id='signUp' class="alert alert-success" role="alert">
-    <span>X</span>
-    <h1>Would you like to sign up for our newsletter?</h1>
-    <button class="btn btn-success center-block">Sign Up!</button>
-</div>
+
+
+    <div id='signUp' class="alert alert-success" role="alert">
+        <span><sup>X</sup></span>
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <button class="btn btn-success center-block">Sign Up!</button>
+    </div>
+
+
 
 <div id="register">
-<h2>Please register for a better experience</h2>
-<button class="btn btn-default center-block">Click to Register</button>
+<h2>Please register for a better experience.</h2>
+<button class="btn btn-primary center-block">Click to Register</button>
 </div>
 
+
 <button id="hideShow">Hide/Show answers</button>
+<button id="lastHighlight">Highlight Last LI in each UL</button>
 <dl>
     <dt>How Did Yellowstone get it's name?</dt>
     <dd>Yellowstone National Park is named after the Yellowstone River, the major river running through the park. </dd>
@@ -111,7 +118,7 @@
     <dt>Where can I find a park map?</dt>
     <dd>You can view maps on specific park websites or download maps from the Harpers Ferry Center map collection.</dd>
 </dl>
-<button id="lastHighlight">Click</button>
+
 
 <h3 id="national-parks-heading">Carlsbad Caverns National Park</h3>
 <ul id="national-parks">
@@ -184,16 +191,17 @@
         $('#signUp').hide();
     });
 
-    $('ul').hide();
+    $('h3').next().hide();
 
     $('h3').on('click', function(){
         $(this).next().slideToggle();
     });
 
-    $('#register').hide();
 
-    setTimeout(function(){
-        $('#register').fadeIn(400); }, 8000);
+    $('#register').hide().delay(8000).fadeIn();
+
+
+
 
 
 
