@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuck Norris or Programing Quote?</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+
+        body{
+            background-color:aquamarine;
+        }
+        h1{
+            text-align: center;
+        }
+
+        #buttons{
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top:1%;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+<div id="buttons">
+
+<button class="btn btn-primary" id="chuck">Chuck it up</button>
+<button class="btn btn-primary" id="getLucky">I'm Feeling Lucky</button>
+<button class="btn btn-primary" id="quote">Gimme a quote</button>
+
+</div>
+<div id="response"></div>
+    <img width="80%" height="auto" class="center-block" src="" alt="">
+
+</div>
+
+
+
+<script src="js/jQuery-2.2.4.js"></script>
+
+<script>
+
+
+    function norrisJoke() {
+        var norrisAjax = $.ajax('https://api.icndb.com/jokes/random');
+
+        norrisAjax.done(function (data, status) {
+            $('#response').html(('<h1>' + data.value.joke + '</h1>'));
+            $('img').attr('src', 'https://media0.giphy.com/media/UvdC8pXudeEak/giphy.gif')
+        });
+    }
+
+    $('#chuck').click(norrisJoke);
+
+
+    function programmerQuote() {
+        var quoteAjax = $.ajax('http://quotes.stormconsultancy.co.uk/random.json');
+
+        quoteAjax.done(function (data, status) {
+            $('#response').html(('<h1>' + data.quote + '</h1>'));
+            $('img').attr('src', 'https://media.giphy.com/media/5Zesu5VPNGJlm/giphy.gif')
+        });
+    }
+
+    $('#quote').click(programmerQuote);
+
+
+    var random = [norrisJoke,programmerQuote];
+
+    function getLucky(){
+        var choice = (Math.round(Math.random()));
+            random[choice]();
+    }
+
+    $('#getLucky').click(getLucky);
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

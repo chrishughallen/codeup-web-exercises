@@ -48,6 +48,15 @@
             "tool"
         ],
         "price": 45
+    },
+    {
+        "title": "Skil Saw",
+        "quantity": 12,
+        "categories": [
+            "tool",
+            "powered"
+        ],
+        "price": 85
     }
 
 ]

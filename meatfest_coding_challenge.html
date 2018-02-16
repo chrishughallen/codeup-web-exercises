@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meat Fest Coding Challenge</title>
+</head>
+<body>
+
+
+
+<script>
+
+    function differenceBetween13 (a) {
+        if (a > 13) {
+            var difference = (a - 13);
+            if (difference > 13) {
+                return difference * 2
+            }
+        }
+        else{
+            return 13 - a;
+        }
+    }
+
+
+    function cityName(str){
+        str = str.toLowerCase().split(' ');
+        if(str[0]==='san'){
+            return 'San Antonio'
+        }
+        if(str[0]==='new'){
+            return 'New York'
+        }
+        else {
+            return
+        }
+    }
+
+
+    function integerArray(num1,num2){
+        var newArr = [];
+        for(var i = num1;i<=num2;i++){
+            newArr.push(i);
+        }
+        return newArr
+    }
+
+
+    function escapeChar(str){
+        str = str.split('');
+            for(var i = 0;i<str.length;i++){
+                if(str[i]==='&'|| str[i]==='<'|| str[i]==='>'||str[i]==='\''||str[i]==='"'){
+                    str[i]='&amp;';
+                    str = str.join('')
+                }
+            }
+            return str
+    }
+
+    // function highestWord(str){
+    //     str = str.toLowerCase();
+    //     str = str.split(' ');
+    //     var arr = [];
+
+
+
+
+
+    //     str.forEach(function(word){
+    //         for(var i = 0;i<word.length;i++){
+    //             var score = 0;
+    //         if(word[i]==='a'){
+    //             score +=1
+    //         }
+    //             if(word[i]==='b'){
+    //                 score += 2
+    //             }
+    //             if(word[i]==='c'){
+    //                 score += 3
+    //             }
+    //             if(word[i]==='d'){
+    //                 score += 4
+    //             }
+    //             if(word[i]==='e'){
+    //                 score += 5
+    //             }
+    //             if(word[i]==='f'){
+    //                 score += 6
+    //             }
+    //             if(word[i]==='g'){
+    //                 score += 7
+    //             }
+    //             if(word[i]==='h'){
+    //                 score += 8
+    //             }
+    //             if(word[i]==='i'){
+    //                 score += 9
+    //             }
+    //             if(word[i]==='j'){
+    //                 score += 10
+    //             }
+    //             if(word[i]==='k'){
+    //                 score += 11
+    //             }
+    //             if(word[i]==='l'){
+    //                 score += 12
+    //             }
+    //             if(word[i]==='m'){
+    //                 score += 13
+    //             }
+    //             if(word[i]==='n'){
+    //                 score += 14
+    //             }
+    //             if(word[i]==='o'){
+    //                 score += 15
+    //             }
+    //             if(word[i]==='p'){
+    //                 score+=16
+    //             }
+    //             if(word[i]==='q'){
+    //                score += 17
+    //             }
+    //             if(word[i]==='r'){
+    //                 score += 18
+    //             }
+    //             if(word[i]==='s'){
+    //                 score += 19
+    //             }
+    //             if(word[i]==='t'){
+    //                 score += 20
+    //             }
+    //             if(word[i]==='u'){
+    //                 score += 21
+    //             }
+    //             if(word[i]==='v'){
+    //                 score += 22
+    //             }
+    //             if(word[i]==='w'){
+    //                 score += 23
+    //             }
+    //             if(word[i]==='x'){
+    //                 score += 24
+    //             }
+    //             if(word[i]==='y'){
+    //                 score += 25
+    //             }
+    //             if(word[i]==='z'){
+    //                 score += 26
+    //             }
+    //         }
+    //         arr.push(score)
+    //
+    //
+    //     });
+    //     arr = arr.sort(function(a,b){
+    //         return b-a
+    //     });
+    //    return arr[0]
+    // }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <style>
+        .col-xs-4{
+            background-color: lightgrey;
+            border: 1px solid black;
+        }
+
+        #weatherBox{
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        span{
+            font-weight: bold;
+        }
+
+        #searchField{
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        #map{
+            width: 100%;
+            height: 400px;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<div id="weatherBox">
+    <h1 class="text-center">3 day Weather Forecast</h1>
+    <h2 class="text-center" id="city"></h2>
+<div id="3dayForecastDiv" class="row text-center center-block">
+    <!--anonymous function is writing forecast html variable into this div -->
+</div>
+</div>
+
+<!--<div id="searchField">-->
+    <!--<input type="number" name="lat" id="lat" placeholder="latitude" value="29.4241">-->
+    <!--<input type="number" name="lng" id="lng" placeholder="longitude" value="-98.4936">-->
+    <!--<button id="searchBtn">Search</button>-->
+<!--</div>-->
+
+<div id="map"></div>
+
+
+<script src="js/jQuery-2.2.4.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+<script>
+
+
+
+        function initWeather() {
+            // var lat = $('#lat').val();
+            // var lon = $('#lng').val();
+            var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+                APPID: "7f8e3aa0aad113510e0c1eaafd1c17b8",
+                q:'San Antonio, us',
+                units: "imperial",
+                cnt:3
+            });
+            request.done(function (response) {
+                console.log(response);
+                var list = response.list;
+                var html = '';
+                $('#city').html(response.city.name + ', ' + response.city.country);
+                list.forEach(function (day) {
+                    var iconCode = day.weather[0].icon;
+                    var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+                    html += ('<div class="col-xs-4">');
+                    html += ('<h1><span>Temp: </span>' + day.temp.max.toFixed(0) + '/' + day.temp.min.toFixed(0) + '</h1>');
+                    html += ("<img src='" + iconUrl + "'>");
+                    html += ('<p><span>humidity</span> ' + day.humidity + '</p>');
+                    html += ('<p><span>wind</span> ' + day.speed + '</p>');
+                    html += ('<p><span>pressure</span>' + day.pressure + '</p>');
+                    html += ('</div>');
+                });
+                $('#3dayForecastDiv').html(html)
+            });
+        }
+
+        initWeather();
+
+         $('#searchBtn').click(initWeather);
+
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvGGiduHFnlohRyTubz_RvwUi46t0XOJU">
+</script>
+
+<script>
+var sanAntonio = {lat:29.4241,lng:-98.4936};
+
+
+function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'),
+        {
+            zoom: 6,
+            center: sanAntonio
+        });
+    google.maps.event.addListener(map, 'click', function(event) {
+        placeMarker(event.latLng);
+    });
+
+}
+
+initMap();
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
