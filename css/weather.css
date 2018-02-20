@@ -1,0 +1,77 @@
+body{
+    color:white;
+}
+
+select{
+    color: black;
+}
+
+#weatherBox{
+    background-image: url('https://media.giphy.com/media/l0Iy5fjHyedk9aDGU/giphy.gif');
+    background-position: center;
+    background-size:cover;
+    padding: 20px;
+    height: 800px;
+}
+
+span{
+    font-weight: bold;
+}
+
+#map{
+    width: 80%;
+    height: 300px;
+    margin:0 auto;
+    margin-top:1%;
+
+}
+button{
+    color: black;
+}
+#ForecastDiv {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.three-days {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color:grey;
+    border: 1px solid white;
+    opacity: .8;
+    padding: 1%;
+    height: 230px;
+    margin: 5px;
+}
+
+
+
+.searchBar{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#searchWeather{
+    width: 300px;
+}
+
+button{
+    width: 200px;
+    margin-bottom:1%;
+}
+
+#searchWeather{
+    color: black;
+}
