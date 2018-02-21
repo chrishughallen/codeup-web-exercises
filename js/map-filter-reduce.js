@@ -32,21 +32,11 @@ const users = [
 ];
 
 
-let over3 = users.filter(function(n){
-    return n.languages.length>=3
-});
+const over3 = users.filter (({ languages }) => languages.length>2);
+// console.log(over3);
 
-console.log(over3);
+const emails = users.map(( { email } ) => email);
+// console.log(emails);
 
-let emails = users.map(function(a){
-    return a.email
-});
-console.log(emails);
-
-
-
-//a represents previous(first) object in array and b represents the current (object) the loop is on
-
-let values = users.reduce((a,b)=> { a[b.id] = b; return a; }, {});
-
-console.log(values);
+const userObject = users.reduce((a,b)=> { a[b.id] = b; return a; }, {});
+// console.log(userObject);
