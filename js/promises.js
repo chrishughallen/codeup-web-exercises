@@ -14,8 +14,10 @@ wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 const lastCommit = (username) => {
 
     //fetching JSON object from github with the passed in username
-    fetch(`https://api.github.com/users/${username}/events/public`,{headers:
-            {'Authorization':'token'}
+    fetch(`https://api.github.com/users/${username}/events/public`, {
+        headers: {
+            'Authorization': 'token '
+        }
 
     //if promise resolves - turn the response into response.json to dig into the object
     }).then(response => response.json()
