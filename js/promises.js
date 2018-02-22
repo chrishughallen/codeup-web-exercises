@@ -1,13 +1,3 @@
-
-//
-// const myPromise = new Promise((resolve, reject) => {
-//     if (Math.random() > 0.5) {
-//         resolve();
-//     } else {
-//         reject();
-//     }
-// });
-
 function wait (num){
 
     return new Promise ((resolve,reject) =>{
@@ -28,8 +18,6 @@ const lastCommit = (username) => {
         .then(data => {
             console.log(`${username}'s last commit was made on ${data[0].created_at.substring(0,10)}`)
         })).catch(() => console.error("BAD REQUEST"))};
-
-
 
 
 
