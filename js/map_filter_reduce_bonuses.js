@@ -162,10 +162,17 @@ const females = family.filter( ({gender}) => gender ==='female');
 
 // - Create a single object with properties containing arrays of all names, genders, and ages
 
+
+    const output = {
+        names: family.map(obj => obj.name),
+        genders: family.map(obj => obj.gender),
+        ages: family.map(obj => obj.age)
+    }
+
 const output = {names: family.map(obj => obj.name), genders: family.map(obj => obj.gender), ages: family.map(obj => obj.age)
 };
 
-console.log(output);
+// console.log(output);
 
 
 
