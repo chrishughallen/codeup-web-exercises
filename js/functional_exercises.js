@@ -37,6 +37,10 @@ const getPrices = totalPrices =>{
 };
 
 
-// const getShirtSizes = users.reduce((a,b) =>{
-//
-// },{});
+// obj = users
+// key = shirt_size
+
+const shirtSizes = users.reduce((obj,key) => {
+
+
+},{});
